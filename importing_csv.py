@@ -24,8 +24,8 @@ except:
 
 reader = csv.reader(open('vendas.csv'), delimiter=';')
 
+count = 0
 for [codigo, qtde, pccompra, pcvenda] in reader:
-    count = 0
     cur.execute('INSERT INTO vendas VALUES (?,?,?,?)', (codigo, qtde, pccompra, pcvenda))
 
     count += 1
