@@ -13,7 +13,7 @@ cur = connection.cursor()
 try:
     cur.execute("""
         CREATE TABLE vendas (
-            codigo INTEGER,
+            codigo INTEGER PRIMARY KEY,
             qtde INTEGER,
             pccompra FLOAT,
             pcvenda FLOAT
